@@ -6,9 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthComponent } from './auth/auth.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { TeachersComponent } from './teachers/teachers.component';
-import { SubjectsComponent } from './subjects/subjects.component';
-import { ClassesComponent } from './classes/classes.component';
+
 import { SessionsComponent } from './sessions/sessions.component';
+import { FormsModule } from '@angular/forms';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { StudentsComponent } from './students/students.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,14 +20,17 @@ import { SessionsComponent } from './sessions/sessions.component';
     AuthComponent,
     RoomsComponent,
     TeachersComponent,
+    SessionsComponent,
     SubjectsComponent,
-    ClassesComponent,
-    SessionsComponent
+    StudentsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
